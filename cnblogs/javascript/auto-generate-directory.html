@@ -10,13 +10,14 @@ function getHxList(jquery_h_list, level, offset) {
         content += '<a name="_labelTop"></a>' + '<div id="navCategory">' + '<ul>';
         for (var i = 0; i < jquery_h_list.length; i++) {
 
-            // 只在最上级标题前生成“回到顶部”
+            // 只在最上级标题前生成“回到顶部” || 第一个标题不生成
             var go_to_top="";
-            if(level<=2){
-                var go_to_top = '<div style="text-align:right;font-size:15px;  color: #333;  transition: 0.3s ease color;"><a href="#_labelTop">回到顶部</a><a name="_label' + offset + i + '"></a></div>';
-            } else {
+            if(level>2 || (level==2 && i==0)){
                 var go_to_top = '<div style="text-align:right;font-size:15px;  color: #333;  transition: 0.3s ease color;"><a href="#_labelTop"></a><a name="_label' + offset + i + '"></a></div>';
+            } else {
+                var go_to_top = '<div style="text-align:right;font-size:15px;  color: #333;  transition: 0.3s ease color;"><a href="#_labelTop">回到顶部</a><a name="_label' + offset + i + '"></a></div>';
             }
+
             $(jquery_h_list[i]).before(go_to_top);
 
             var li_content = '<li><a href="#_label' + offset + i + '">' + $(jquery_h_list[i]).text() + '</a></li>';
