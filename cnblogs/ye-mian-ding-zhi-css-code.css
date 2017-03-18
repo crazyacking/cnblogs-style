@@ -589,6 +589,24 @@ body {
     overflow: hidden
 }
 
+
+#sideBar .newsItem #profile_block::before {
+    content: " ";
+    position: relative;
+    border-radius: 150px;
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: 0px solid #fff;
+    box-shadow: 0 -1px 12px -4px #000;
+    background-size: contain;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-bottom: 60px;
+    transform: translate3d(-50%, 20%, 0);
+    background-image: url(http://images2015.cnblogs.com/blog/606573/201608/606573-20160806135123950-1952058910.png);
+}
+
 #sideBar .newsItem #profile_block {
     padding: 20px;
     color: #666;
