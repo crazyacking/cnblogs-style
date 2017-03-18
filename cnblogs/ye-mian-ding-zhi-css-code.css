@@ -288,21 +288,23 @@ body {
     text-overflow: ellipsis;
     white-space: normal
 }
-
+/*
 #header {
     background-color: #21292f;
-    height: 300px;
+    height: 0px;
     position: relative;
     font-family: "Microsoft JhengHei UI","Microsoft YaHei"
-}
+}*/
 
 #header #blogTitle {
-    color: #fff;
-    text-align: center
+    /*color: #fff;
+    text-align: center;*/
+    display: none !important;
 }
 
 #header #blogTitle .headermaintitle {
     color: #21292f;
+    height: 0px;
     font-size: 28px
 }
 
@@ -310,7 +312,7 @@ body {
     font: 17px Georgia,"Times New Roman",Times,sans-serif;
     font-size: 18px
 }
-
+/*
 #header::before {
     content: " ";
     position: relative;
@@ -325,7 +327,7 @@ body {
     margin-bottom: 20px;
     transform: translate3d(-50%, 20%, 0);
     background-image: url("http://images2015.cnblogs.com/blog/606573/201608/606573-20160806135123950-1952058910.png");
-}
+}*/
 
 #header #navigator {
     background-color: #fff;
@@ -414,18 +416,18 @@ body {
     overflow-x: hidden;
 }
 
-/* ÉèÖÃ¹ö¶¯ÌõµÄÑùÊ½ */
+/* 脡猫脰脙鹿枚露炉脤玫碌脛脩霉脢陆 */
 ::-webkit-scrollbar {
     width: 0.7%;
 }
 
-/* ¹ö¶¯²Û */
+/* 鹿枚露炉虏脹 */
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
 }
 
-/* ¹ö¶¯Ìõ»¬¿é */
+/* 鹿枚露炉脤玫禄卢驴茅 */
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: rgba(0,0,0,0.1);
@@ -522,6 +524,7 @@ body {
     padding-top: 0;
     padding-bottom: 0
 }
+
 
 #main #mainContent .postTitle a {
     color: #333;
