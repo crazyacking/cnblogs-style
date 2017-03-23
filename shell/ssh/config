@@ -1,0 +1,5 @@
+# /Users/crazyacking/.ssh/config
+Host *
+    ServerAliveInterval 30
+    ServerAliveCountMax 6
+    User ssh_user
