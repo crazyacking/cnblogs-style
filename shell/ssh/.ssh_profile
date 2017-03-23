@@ -1,0 +1,23 @@
+# ~/.ssh_profile
+#控制台颜色
+ export CLICOLOR=1
+ export LSCOLORS=Exfxcxdxbxegedabagacad
+ export GREP_OPTIONS='--color=auto'
+
+#Maven
+export MAVEN_OPTS='-Xmx512m -XX:MaxPermSize=128m'
+
+#sublime
+alias subl='open -a /Applications/"Sublime Text.app"'
+
+
+#Typora
+alias typora='open -a /Applications/"Typora.app"'
+
+#方便查看文件
+alias ll='ls -alF'
+
+# ssh连接复用
+Host *
+    ControlMaster auto
+    ControlPath /tmp/ssh_connection_%h_%p_%r.sock
