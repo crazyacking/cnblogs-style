@@ -66,7 +66,7 @@ $("iframe[id^=google],iframe[src*=google]").remove();},2000);
 <link rel="stylesheet" href="http://files.cnblogs.com/files/crazyacking/slider.min.css"/>
 <script src="http://files.cnblogs.com/files/crazyacking/linlin.js"></script>
 
-<div style="margin-bottom: 0px;overflow: hidden;box-shadow: 0 2px 16px #ddd;background-color:#fff;height:360px;">
+<div style="margin-bottom: 0px;overflow: hidden;box-shadow: 0 2px 16px #ddd;background-color:#fff;height:410px;">
 <div id="imgBar" style="margin:0 auto;">
 </div>
 </div>
@@ -76,7 +76,7 @@ $("iframe[id^=google],iframe[src*=google]").remove();},2000);
         imgs: [
             "http://images.cnblogs.com/cnblogs_com/crazyacking/870247/o_798221-20170315144945729-843638882.jpg",
             "http://images.cnblogs.com/cnblogs_com/crazyacking/870247/o_798221-20170315161050166-1628033371.jpg",
-            "http://images.cnblogs.com/cnblogs_com/crazyacking/870247/o_69e100a04d9a64c18d00699bcf921f69.jpg",],
+            "http://files.cnblogs.com/files/crazyacking/54443332211c5577635363041.56061da820a5d.gif"],
         scale: 128 / 36,
         border: true,
         delay: 2200,
