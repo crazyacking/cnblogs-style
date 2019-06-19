@@ -1,5 +1,5 @@
 <!-- 自适应 -->
-<metaname=”viewport”content=”width=device-width, initial-scale=1″ />
+<metaname="viewport" content="width=device-width, initial-scale=1" />
 <!-- 
 <link href="http://files.cnblogs.com/files/crazyacking/marvin.nav.my1505.css" rel="stylesheet">
 
@@ -42,12 +42,24 @@ var browser={
 </head>
 
 
+<!-- 禁用右键(有效) -->
+<script>
+function stop(){
+return false;
+}
+document.oncontextmenu=stop;
+</script>
 
 
-
-
-
-
+<!-- 禁止查看源代码 -->
+<script>
+function clear(){
+Source=document.body.firstChild.data;
+document.open();
+document.close();
+document.title="禁止查看源代码";
+document.body.innerHTML=Source;
+}</script>
 
 
 <script type="text/javascript">
