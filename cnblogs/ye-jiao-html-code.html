@@ -10,18 +10,28 @@ function getHxList(jquery_h_list, level, offset) {
         content += '<a name="_labelTop"></a>' + '<div id="navCategory">' + '<ul>';
         for (var i = 0; i < jquery_h_list.length; i++) {
 
+
+
+
+            // 去除“回到顶部”，影响美观
+            // 
+            // 
             // 只在最上级标题前生成“回到顶部”
             var go_to_top="";
 
             if(level>2 || (level==2 && i==0)){
-                var go_to_top = '<div style="text-align:right;font-size:15px;  color: #333;  transition: 0.3s ease color;"><a href="#_labelTop"></a><a name="_label' + offset + i + '"></a></div>';
+                var go_to_top = '<div style="text-align:right;font-size:15px;  color: #333;  transition: 0.3s ease color;"><a href="#_labelTop" style="font-size:15px;  color: #075DB3;  transition: 0.3s ease color; border-bottom: 1px dashed;"></a><a name="_label' + offset + i + '"></a></div>';
             } else {
-                var go_to_top = '<div style="text-align:right;font-size:15px;  color: #333;  transition: 0.3s ease color;"><a href="#_labelTop">回到顶部</a><a name="_label' + offset + i + '"></a></div>';
+                var go_to_top = '<div style="text-align:right;font-size:15px;  color: #333;  transition: 0.3s ease color;"><a href="#_labelTop" style="font-size:15px;  color: #075DB3;  transition: 0.3s ease color; border-bottom: 1px dashed;"></a><a name="_label' + offset + i + '"></a></div>';
             }
 
             $(jquery_h_list[i]).before(go_to_top);
+            
+            
+            
+            
 
-            var li_content = '<li><a href="#_label' + offset + i + '">' + $(jquery_h_list[i]).text() + '</a></li>';
+            var li_content = '<li><a href="#_label' + offset + i + '"style="font-size:15px;  color: #075DB3;  transition: 0.3s ease color; border-bottom: 1px dashed;">' + $(jquery_h_list[i]).text() + '</a></li>';
             content += li_content;
 
             var jquery_h1_list = $(jquery_h_list[i]).nextUntil(jquery_h_list[i + 1], "h" + level);
@@ -30,6 +40,7 @@ function getHxList(jquery_h_list, level, offset) {
         }
         content += '</ul>';
         content += '</div>';
+        content += '<p>&nbsp;</p>';
     }
     return content;
 }
@@ -51,7 +62,7 @@ function GenerateContentList() {
         return;
     }
 
-    var content = '<p style="font-size:18px"><b>阅读目录</b></p>';
+    var content = "";
     content += getHxList(jquery_h1_list, 1, 0);
     if ($('#cnblogs_post_body').length != 0) {
         $($('#cnblogs_post_body')[0]).prepend(content);
